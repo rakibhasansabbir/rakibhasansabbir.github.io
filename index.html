@@ -7,56 +7,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
     <style>
         :root {
-            --primary-color: #6c5ce7;
-            --secondary-color: #574b90;
-            --accent-color: #00cec9;
-            --text-color: #2d3436;
-            --light-text: #636e72;
-            --background: #dfe6e9;
-            --card-bg: #ffffff;
-            --gradient-start: #a29bfe;
-            --gradient-end: #6c5ce7;
+            --primary-color: #ff9800;
+            --secondary-color: #ff5722;
+            --accent-color: #00bcd4;
+            --text-color: #ffffff;
+            --background: #121212;
+            --card-bg: #1e1e1e;
+            --light-text: #bbbbbb;
+            --gradient-start: #3a3a3a;
+            --gradient-end: #1e1e1e;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             transition: all 0.3s ease;
         }
-        
+
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--background);
             color: var(--text-color);
             line-height: 1.7;
         }
-        
+
         header {
             background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            color: white;
+            color: var(--text-color);
             padding: 80px 0 130px;
             text-align: center;
             position: relative;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
-        
+
         header h1 {
             font-size: 2.5rem;
             letter-spacing: 1px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         }
-        
+
         .profile-container {
             max-width: 1100px;
             margin: -100px auto 0;
             padding: 0 20px;
         }
-        
+
         .profile-card {
             background: var(--card-bg);
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -64,24 +64,24 @@
             padding: 40px;
             position: relative;
         }
-        
+
         .profile-img {
             width: 180px;
             height: 180px;
             border-radius: 50%;
             border: 6px solid var(--card-bg);
-            box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
+            box-shadow: 0 8px 25px rgba(255, 87, 34, 0.3);
             object-fit: cover;
             margin-bottom: 25px;
         }
-        
+
         .name {
             font-size: 2.4rem;
             font-weight: 700;
             color: var(--primary-color);
             margin-bottom: 5px;
         }
-        
+
         .title {
             color: var(--accent-color);
             font-weight: 600;
@@ -89,7 +89,7 @@
             margin-bottom: 20px;
             letter-spacing: 1px;
         }
-        
+
         .bio {
             text-align: center;
             max-width: 700px;
@@ -99,22 +99,22 @@
             padding: 0 20px;
             line-height: 1.8;
         }
-        
+
         .section {
             margin: 50px 0;
             width: 100%;
             padding: 0 20px;
         }
-        
+
         .section-title {
             position: relative;
             display: inline-block;
             margin-bottom: 30px;
             font-size: 1.8rem;
             font-weight: 600;
-            color: var(--secondary-color);
+            color: var(--primary-color);
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -125,7 +125,7 @@
             background: var(--accent-color);
             border-radius: 2px;
         }
-        
+
         .skills-container {
             display: flex;
             flex-wrap: wrap;
@@ -133,9 +133,9 @@
             gap: 12px;
             margin-top: 25px;
         }
-        
+
         .skill {
-            background-color: rgba(108, 92, 231, 0.1);
+            background-color: rgba(255, 152, 0, 0.1);
             color: var(--primary-color);
             border-radius: 50px;
             padding: 10px 20px;
@@ -144,21 +144,21 @@
             transition: all 0.3s ease;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         }
-        
+
         .skill:hover {
             background-color: var(--primary-color);
-            color: white;
+            color: var(--text-color);
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(108, 92, 231, 0.3);
+            box-shadow: 0 8px 15px rgba(255, 152, 0, 0.3);
         }
-        
+
         .contact-links {
             display: flex;
             justify-content: center;
             gap: 25px;
             margin-top: 30px;
         }
-        
+
         .contact-link {
             display: inline-flex;
             align-items: center;
@@ -166,75 +166,28 @@
             width: 55px;
             height: 55px;
             background-color: var(--primary-color);
-            color: white;
+            color: var(--text-color);
             border-radius: 50%;
             font-size: 1.3rem;
             text-decoration: none;
             transition: all 0.4s ease;
-            box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
         }
-        
+
         .contact-link:hover {
             transform: translateY(-8px) rotate(360deg);
             background-color: var(--accent-color);
-            box-shadow: 0 12px 25px rgba(0, 206, 201, 0.4);
+            box-shadow: 0 12px 25px rgba(0, 188, 212, 0.4);
         }
-        
+
         footer {
             text-align: center;
             padding: 30px;
             color: var(--light-text);
             font-size: 0.95rem;
             margin-top: 30px;
-            background-color: #f7f7f7;
-            border-top: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        @media (max-width: 768px) {
-            header {
-                padding: 60px 0 100px;
-            }
-            
-            .profile-container {
-                margin-top: -80px;
-            }
-            
-            .profile-card {
-                padding: 30px 15px;
-            }
-            
-            .profile-img {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .name {
-                font-size: 2rem;
-            }
-            
-            .title {
-                font-size: 1rem;
-            }
-            
-            .bio {
-                font-size: 1rem;
-                padding: 0 10px;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
-            }
-            
-            .skill {
-                padding: 8px 16px;
-                font-size: 0.9rem;
-            }
-            
-            .contact-link {
-                width: 45px;
-                height: 45px;
-                font-size: 1.1rem;
-            }
+            background-color: #191919;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
